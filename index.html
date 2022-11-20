@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior:smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Belajar tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                container: {
+                    center: true,
+                    padding: '16px',
+
+                },
+                extend: {
+                    colors: {
+                        primary: '#14b8a6',
+                        dark: '#0f172a',
+                    },
+                    screens: {
+                        '2xl': '1320px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <!-- This example requires Tailwind CSS v2.0+ -->
+
+    <nav class="p-5 bg-dark text-white shadow px-16 md:flex md:items-center md:justify-between">
+        <div class="flex justify-between items-center ">
+            <span class="text-2xl font-[Poppins] cursor-pointer">
+            Putraadji13
+          </span>
+
+            <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+            <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+          </span>
+        </div>
+
+        <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+            <li class="mx-4 my-6 md:my-0">
+                <a href="#home" class="text-lg hover:text-cyan-500 duration-500">Home</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="#about" class="text-lg hover:text-cyan-500 duration-500">About</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="#portfolio" class="text-lg hover:text-cyan-500 duration-500">Portfolio</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="#blog" class="text-lg hover:text-cyan-500 duration-500">Tulisan</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="#contact" class="text-lg hover:text-cyan-500 duration-500">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- Header end -->
+    <!-- Hero Section Start -->
+    <section id="home" class="pt-12">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full self-center px-9 lg:w-1/2">
+                    <h1 class="text-base font-semibold text-primary md:text-xl">Hallooo Semua, saya <span class="block font-bold text-dark text-4xl mt-1"> Putra Adji Bintoro</span></h1>
+                    <h2 class="font-medium text-slate-500 text-lg mb-5 lg:text-2xl">College Student & <span class="text-dark"> Front End Dev</span></h2>
+                    <p class="font-medium text-slate-400 mb-10">Sangat tertarik belajar <span class="text-dark"> web programming.</span></p>
+
+                    <a href="#" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-70 transition duration-300 ease-in-out"> Download CV</a>
+                    <a href=" https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=bintoro.adji56@gmail.com" class="text-base font-semibold text-white bg-gray-600 py-3 px-8 rounded-full hover:shadow-lg hover:opacity-70 transition duration-300 ease-in-out"> Contact Me</a>
+                </div>
+                <div class="w-full self-end px-4 lg:w-1/2">
+                    <div class=" relative mt-10">
+                        <img src="img/rsz_1foto_almet-removebg-preview.png" width="300" height="300" alt="putra adji" class="max-w-full mx-auto lg:w-96">
+                        <span class="absolute bottom-10 left-1/2 -z-10 -translate-x-1/2 md:scale-100 lg:mb-16"><svg width="300" height="300" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="lg:w-70">
+                            <path fill="#14b8a6" d="M49.7,-63.5C59.7,-50.9,59.7,-30.7,57.9,-14.2C56,2.3,52.3,15.2,48,32.5C43.7,49.9,38.9,71.8,27.7,75.6C16.6,79.4,-1,65.2,-17,55.5C-33,45.9,-47.4,40.8,-59.6,29.6C-71.9,18.4,-82,1.1,-77.4,-11.6C-72.7,-24.3,-53.3,-32.3,-37.9,-43.9C-22.5,-55.6,-11.3,-70.9,4.3,-76C19.9,-81.2,39.8,-76.1,49.7,-63.5Z" transform="translate(100 100)  scale(1.1)" />
+                          </svg></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End-->
+    <!-- About Section start -->
+    <section id="about" class="pt-20 pb-32 ">
+        <div class="container">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full px-4 mb-10 lg:w-1/2">
+                    <h4 class="block font-bold uppercase text-primary text-lg mb-5 max-w-medium">Tentang Saya</h4>
+                    <h2 class="text-2xl font-bold mb-3 lg:text-3xl">Yuk belajar web programming bersama saya</h2>
+                    <p class="text-medium text-base text-slate-500 max-w-xl lg:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet eum facere maiores nam omnis esse? Unde?</p>
+                </div>
+                <div class="w-full px-4 lg:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4 text-dark lg:text-3xl pt-16">Mari Berteman</h3>
+                    <p class="text-slate-500 text-base pt-9 mb-6 font-medium lg:text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eaque assumenda voluptatibus quia nam porro laboriosam illo corporis?</p>
+                    <div class="flex items-center">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/putraadji_4/?hl=id" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center mr-3 border border-slate-300 hover:border-primary">
+                            <svg role="img" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                        </a>
+                        <!-- Linkedin -->
+                        <a href="https://www.linkedin.com/in/putra-adji-bintoro/" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center mr-3 border border-slate-300 hover:border-primary">
+                            <svg role="img" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <!-- youtube -->
+                        <a href="" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center mr-3 border border-slate-300 hover:border-primary">
+                            <svg role="img" width="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About section end -->
+    <!-- Portfolio section start -->
+    <section id="portfolio" class="pb-32">
+        <div class="bg-slate-100 pt-20 pb-20">
+            <div class="max-w-xl mx-auto text-center mb-16">
+                <h4 class="block font-bold uppercase text-primary text-lg mb-5 max-w-medium">Portfolio</h4>
+                <h2 class="text-2xl font-bold mb-3 lg:text-3xl">Project Terbaru</h2>
+                <p class="text-medium mx-10 text-base text-slate-500 max-w-xl lg:text-lg ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet eum facere maiores nam omnis esse? Unde?</p>
+            </div>
+            <div class="flex flex-wrap items-center justify-around mb-16 mt-10">
+                <div data-aos="fade-left" class="row wis" id="wis4">
+                    <div class="flex items-center">
+                        <a href="" class=""> <img src="img/gambar1.png" alt="Portfolio1" width="400px"></a>
+                    </div>
+                </div>
+                <div class="mt-16 lg:mt-0">
+                    <a href="https://putraadji.github.io/yogyakarta_tour/" class=""> <img src="img/gambar_2.png" alt="Portfolio1" width="400px"></a>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-around mt-16">
+                <div>
+                    <a href="https://putraadji.github.io/wedding.invitation/diamond1.html" class=""> <img src="img/gambar3.png" alt="Portfolio1" width="400px"></a>
+                </div>
+                <div class="mt-16 lg:mt-0">
+                    <a href="https://putraadji.github.io/Putraadji13.github.io/" class=""> <img src="img/gambar4.png" alt="Portfolio1" width="400px"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio section end -->
+    <!-- Blog section start -->
+    <section id="blog">
+        <div class=" pb-20">
+            <div class="max-w-xl mx-auto text-center mb-16">
+                <h4 class="block font-bold uppercase text-primary text-lg mb-5 max-w-medium">Blog Saya.</h4>
+                <h2 class="text-2xl font-bold mb-3 lg:text-3xl">Tulisan Terkini</h2>
+                <p class="text-medium mx-10 text-base text-slate-500 max-w-xl lg:text-lg ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet eum facere maiores nam omnis esse? Unde?</p>
+            </div>
+
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
+                        <a href=""><img src="https://source.unsplash.com/360x200?programming" alt="" class="w-full"></a>
+                        <div class="py-8 px-6">
+                            <a href="" class="block mb-5 font-semibold text-xl text-dark hover:text-primary truncate">
+                                <h3>Tips Belajar programming</h3>
+                            </a>
+                            <p class="font-medium text-base text-secondary mb-6 xl:truncate">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, quam.</p>
+                            <a href="" class="font-medium text-small text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca selengkapnya.</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
+                        <a href=""><img src="https://source.unsplash.com/360x200?design+web" alt="" class="w-full"></a>
+                        <div class="py-8 px-6">
+                            <a href="" class="block mb-5 font-semibold text-xl text-dark hover:text-primary truncate">
+                                <h3>Tips Design Web</h3>
+                            </a>
+                            <p class="font-medium text-base text-secondary mb-6 xl:truncate">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, quam.</p>
+                            <a href="" class="font-medium text-small text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca selengkapnya.</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
+                        <a href=""><img src="https://source.unsplash.com/360x200?Coffee" alt="" class="w-full"></a>
+                        <div class="py-8 px-6">
+                            <a href="" class="block mb-5 font-semibold text-xl text-dark hover:text-primary truncate">
+                                <h3>Menikmati Coffee</h3>
+                            </a>
+                            <p class="font-medium text-base text-secondary mb-6 xl:truncate">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam laborum ad pariatur ex animi harum quae esse fugit earum excepturi.</p>
+                            <a href="" class="font-medium text-small text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca selengkapnya.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog section end -->
+    <!-- Form Start -->
+    <section id="contact" class="pt-36 pb-32">
+        <div class="container">
+            <div class="max-w-xl mx-auto text-center mb-16">
+                <h4 class="block font-bold uppercase text-primary text-lg mb-5 max-w-medium">Contact.</h4>
+                <h2 class="text-2xl font-bold mb-3 lg:text-3xl">Hubungi Saya.</h2>
+                <p class="text-medium mx-10 text-base text-slate-500 max-w-xl lg:text-lg ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet eum facere maiores nam omnis esse? Unde?</p>
+            </div>
+            <form>
+                <div class="w-full lg:w-2/3 lg:mx-auto">
+                    <div class="w-full px-4 mb-8">
+                        <label for="name" class="text-base font-bold text-primary">Nama</label>
+                        <input type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">
+                    </div>
+                    <div class="w-full px-4 mb-8">
+                        <label for="email" class="text-base font-bold text-primary">Email</label>
+                        <input type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">
+                    </div>
+                    <div class="w-full px-4 mb-8">
+                        <label for="message" class="text-base font-bold text-primary">Pesan</label>
+                        <textarea type="text" id="message" class=" w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"></textarea>
+                    </div>
+                    <div class="w-full ml-4">
+                        <button class="text-base font-semibold text-white bg-primary py-3 rounded-md px-8 hover:opacity-80 hover:shadow-lg transition duration-900">Kirim</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Form end -->
+    <!-- Section Footer -->
+    <footer class="bg-dark pt-24 pb-12">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3 text-center">
+                    <h2 class="font-bold text-4xl text-white mb-5">Putra Adji Bintoro</h2>
+                    <h3 class="font-bold text-2xl mb-2">Hubungi Saya</h3>
+                    <p>bintoro.adji56@gmail.com</p>
+                    <p>Kokosan,Prambanan</p>
+                    <p>Klaten</p>
+                </div>
+                <div class="w-full px-4 mb-12 md:w-1/3 text-center">
+                    <h3 class="font-semibold text-xl text-white mb-5">Kategori Tulisan</h3>
+                    <ul class="text-slate-300">
+                        <li>
+                            <a href="#" class="inline-block text-base hover:text-primary mb-3">Programming</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-block text-base hover:text-primary mb-3">Design Web</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-block text-base hover:text-primary mb-3">Coffee</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full px-4 mb-12 md:w-1/3 text-center">
+                    <h3 class="font-semibold text-xl text-white mb-5">Kategori Tulisan</h3>
+                    <ul class="text-slate-300">
+                        <li>
+                            <a href="#home" class="inline-block text-base hover:text-primary mb-3">Beranda</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="inline-block text-base hover:text-primary mb-3">Tentang Saya</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio" class="inline-block text-base hover:text-primary mb-3">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#blog" class="inline-block text-base hover:text-primary mb-3">Tulisan</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="inline-block text-base hover:text-primary mb-3">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full pt-10 border-t border-slate-800">
+                <div class="flex items-center justify-center mb-5">
+                    <!-- Instagram -->
+                    <a href="" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center mr-3 border border-slate-300 hover:border-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48" style=" fill:#ececec;"><radialGradient id="yOrnnhliCrdS2gy~4tD8ma" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fd5"></stop><stop offset=".328" stop-color="#ff543f"></stop><stop offset=".348" stop-color="#fc5245"></stop><stop offset=".504" stop-color="#e64771"></stop><stop offset=".643" stop-color="#d53e91"></stop><stop offset=".761" stop-color="#cc39a4"></stop><stop offset=".841" stop-color="#c837ab"></stop></radialGradient><path fill="url(#undefined)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path><radialGradient id="yOrnnhliCrdS2gy~4tD8mb" cx="11.786" cy="5.54" r="29.813" gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4168c9"></stop><stop offset=".999" stop-color="#4168c9" stop-opacity="0"></stop></radialGradient><path fill="url(#undefined)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path><path fill="#fff" d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"></path><circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle><path fill="#fff" d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"></path></svg>
+                    </a>
+                    <!-- Linkedin -->
+                    <a href="" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center mr-3 border border-slate-300 hover:border-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="38" height="38" viewBox="0 0 64 64" style=" fill:#ececec;"><path d="M32,6C17.641,6,6,17.641,6,32c0,14.359,11.641,26,26,26s26-11.641,26-26C58,17.641,46.359,6,32,6z M25,44h-5V26h5V44z M22.485,24h-0.028C20.965,24,20,22.888,20,21.499C20,20.08,20.995,19,22.514,19c1.521,0,2.458,1.08,2.486,2.499 C25,22.887,24.035,24,22.485,24z M44,44h-5v-9c0-3-1.446-4-3-4c-1.445,0-3,1-3,4v9h-5V26h5v3c0.343-0.981,1.984-3,5-3c4,0,6,3,6,8 V44z"></path></svg>
+                    </a>
+                    <!-- youtube -->
+                    <a href="" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center mr-3 border border-slate-300 hover:border-primary">
+                        <svg role="img" width="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style=" fill:#ececec;"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                </div>
+                <p class="font-medium text-slate-700 text-sm text-center z">Dibuat oleh Putra Adji dengan Tailwind CSS 3</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Contact end -->
+</body>
+<script src="script.js "></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
+<script>
+    AOS.init({
+        duration: 2000,
+        once: true,
+    });
+</script>
+<script>
+    function Menu(e) {
+        let list = document.querySelector('ul');
+        e.name === 'menu' ? (e.name = "close", list.classList.add('top-[70px]'), list.classList.add('opacity-100'), list.classList.add('z-50'), list.classList.add('bg-slate-600'), list.classList.add('text-white')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'), list.classList.add('bg-opacity-100'), list.classList.add('bg-slate-600'))
+    }
+</script>
+
+</html>
